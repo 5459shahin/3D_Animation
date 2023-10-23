@@ -10,10 +10,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    perspective: 1000px;
 }
 
 .container{
-    /* background: lightblue; */
+    margin-top: 15px;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -21,14 +22,16 @@ body{
 }
 
 .card{
+    transform-style: preserve-3d;
     min-height: 80vh;
     width: 35rem;
     border-radius: 30px;
-    padding: 0rem 5rem;
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0,0,0,0.2);
+    padding: 0rem 10rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0,0.2);
 }
 
 .sneaker{
+    margin-top: 10px;
     min-height: 35vh;
     display: flex;
     align-items: center;
@@ -36,13 +39,15 @@ body{
     
 }
 .sneaker img{
-    width: 20rem;
+    margin-bottom: 15px;
+    width: 18rem;
     z-index: 2;
+    transition: all 0.75s ease-out;
 }
 
 .circle{
-    width: 15rem;
-    height: 15rem;
+    width: 13rem;
+    height: 13rem;
     background: linear-gradient(
     to right,
     rgba(245, 70, 66, 0.75), 
@@ -52,21 +57,29 @@ body{
     border-radius: 50%;
     z-index: 1;
 }
+
+.info{
+    margin-top: 30px;
+}
 .info h1{
     font-size: 3rem;
+    transition: all 0.75s ease-out;
 }
 
 .info h3{
+    margin-top: 30px;
     font-size: 1.3rem;
-    padding: 2rem, 0rem;
+    /* padding: 3rem, 0rem; */
     color: #585858;
     font-weight: lighter;
+    transition: all 0.75s ease-out;
 }
 
 .sizes{
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: flex;
     justify-content: space-between;
+    transition: all 0.75s ease-out;
 }
 
 .sizes button{
@@ -86,7 +99,8 @@ button.active{
 }
 
 .purchase{
-    margin-top: 5rem;
+    margin: 2rem 0rem;
+    transition: all 0.75s ease-out;
 }
 
 .purchase button{
@@ -98,6 +112,7 @@ button.active{
     cursor: pointer;
     border-radius: 30px;
     font-weight: bolder;
+    
 }
 
 
